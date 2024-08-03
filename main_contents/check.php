@@ -19,6 +19,7 @@ $joukens = [$bakaze, $jikaze, $dora, $renchan, $reach, $naki, $tumo_ron, $kan, $
 
 /*手牌変数*/
 $jihai = $_POST['jihai'];
+var_dump($jihai);
 $j_count_ton = $_POST['j-count-ton'];
 $j_count_nan = $_POST['j-count-nan'];
 $j_count_sha = $_POST['j-count-sha'];
