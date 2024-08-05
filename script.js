@@ -45,8 +45,8 @@ $(function(){
   var hatuC = 0;
   var chunC = 0;
 
-  //字牌データ
-  var jihais = [];
+  //選択牌データ
+  var selectHais = [];
 
 
   //関数
@@ -79,85 +79,85 @@ $(function(){
       case 'chun':
           chunC++;
           break;
-      case 'man-1':
+      case 'm-1':
           m1C++;
           break;
-      case 'man-2':
+      case 'm-2':
           m2C++;
           break;
-      case 'man-3':
+      case 'm-3':
           m3C++;
           break;
-      case 'man-4':
+      case 'm-4':
           m4C++;
           break;
-      case 'man-5':
+      case 'm-5':
           m5C++;
           break;
-      case 'man-6':
+      case 'm-6':
           m6C++;
           break;
-      case 'man-7':
+      case 'm-7':
           m7C++;
           break;
-      case 'man-8':
+      case 'm-8':
           m8C++;
           break;
-      case 'man-9':
+      case 'm-9':
           m9C++;
           break;
-      case 'pin-1':
+      case 'p-1':
           p1C++;
           break;
-      case 'pin-2':
+      case 'p-2':
           p2C++;
           break;
-      case 'pin-3':
+      case 'p-3':
           p3C++;
           break;
-      case 'pin-4':
+      case 'p-4':
           p4C++;
           break;
-      case 'pin-5':
+      case 'p-5':
           p5C++;
           break;
-      case 'pin-6':
+      case 'p-6':
           p6C++;
           break;
-      case 'pin-7':
+      case 'p-7':
           p7C++;
           break;
-      case 'pin-8':
+      case 'p-8':
           p8C++;
           break;
-      case 'pin-9':
+      case 'p-9':
           p9C++;
           break;
-      case 'sou-1':
+      case 's-1':
           s1C++;
           break;
-      case 'sou-2':
+      case 's-2':
           s2C++;
           break;
-      case 'sou-3':
+      case 's-3':
           s3C++;
           break;
-      case 'sou-4':
+      case 's-4':
           s4C++;
           break;
-      case 'sou-5':
+      case 's-5':
           s5C++;
           break;
-      case 'sou-6':
+      case 's-6':
           s6C++;
           break;
-      case 'sou-7':
+      case 's-7':
           s7C++;
           break;
-      case 'sou-8':
+      case 's-8':
           s8C++;
           break;
-      case 'sou-9':
+      case 's-9':
           s9C++;
           break;
     }
@@ -201,137 +201,137 @@ $(function(){
             return true;
           }
           break;
-      case 'man-1':
+      case 'm-1':
           if (m1C >= 4) {
               return true;
           }
           break;
-      case 'man-2':
+      case 'm-2':
           if (m2C >= 4) {
               return true;
           }
           break;
-      case 'man-3':
+      case 'm-3':
           if (m3C >= 4) {
               return true;
           }
           break;
-      case 'man-4':
+      case 'm-4':
           if (m4C >= 4) {
               return true;
           }
           break;
-      case 'man-5':
+      case 'm-5':
           if (m5C >= 4) {
               return true;
           }
           break;
-      case 'man-6':
+      case 'm-6':
           if (m6C >= 4) {
               return true;
           }
           break;
-      case 'man-7':
+      case 'm-7':
           if (m7C >= 4) {
               return true;
           }
           break;
-      case 'man-8':
+      case 'm-8':
           if (m8C >= 4) {
               return true;
           }
           break;
-      case 'man-9':
+      case 'm-9':
           if (m9C >= 4) {
               return true;
           }
           break;
-      case 'pin-1':
+      case 'p-1':
           if (p1C >= 4) {
               return true;
           }
           break;
-      case 'pin-2':
+      case 'p-2':
           if (p2C >= 4) {
               return true;
           }
           break;
-      case 'pin-3':
+      case 'p-3':
           if (p3C >= 4) {
               return true;
           }
           break;
-      case 'pin-4':
+      case 'p-4':
           if (p4C >= 4) {
               return true;
           }
           break;
-      case 'pin-5':
+      case 'p-5':
           if (p5C >= 4) {
               return true;
           }
           break;
-      case 'pin-6':
+      case 'p-6':
           if (p6C >= 4) {
               return true;
           }
           break;
-      case 'pin-7':
+      case 'p-7':
           if (p7C >= 4) {
               return true;
           }
           break;
-      case 'pin-8':
+      case 'p-8':
           if (p8C >= 4) {
               return true;
           }
           break;
-      case 'pin-9':
+      case 'p-9':
           if (p9C >= 4) {
               return true;
           }
           break;
-      case 'sou-1':
+      case 's-1':
           if (s1C >= 4) {
               return true;
           }
           break;
-      case 'sou-2':
+      case 's-2':
           if (s2C >= 4) {
               return true;
           }
           break;
-      case 'sou-3':
+      case 's-3':
           if (s3C >= 4) {
               return true;
           }
           break;
-      case 'sou-4':
+      case 's-4':
           if (s4C >= 4) {
               return true;
           }
           break;
-      case 'sou-5':
+      case 's-5':
           if (s5C >= 4) {
               return true;
           }
           break;
-      case 'sou-6':
+      case 's-6':
           if (s6C >= 4) {
               return true;
           }
           break;
-      case 'sou-7':
+      case 's-7':
           if (s7C >= 4) {
               return true;
           }
           break;
-      case 'sou-8':
+      case 's-8':
           if (s8C >= 4) {
               return true;
           }
           break;
-      case 'sou-9':
+      case 's-9':
           if (s9C >= 4) {
               return true;
           }
@@ -383,10 +383,156 @@ $(function(){
 
   //inputに追加
   function addInput(id){
-    jihais.push(id);
-    var uniqueJihais = Array.from(new Set(jihais));
-    $('#jihai').attr('value',uniqueJihais);
+    selectHais.push(id);
+    var uniqueHais = Array.from(new Set(selectHais));
+    $('#selectHais').attr('value',uniqueHais);
+  }
 
+  function addInputCount(id){
+    switch(id) {
+        case 'ton':
+            $("#j_count_ton").attr('value',tonC);
+            break;
+        case 'nan':
+            $('#j_count_nan').attr('value',nanC);
+            break;
+        case 'sha':
+            $('#j_count_sha').attr('value',shaC);
+            break;
+        case 'pei':
+            $('#j_count_pei').attr('value',peiC);
+            break;
+        case 'haku':
+            $('#j_count_haku').attr('value',hakuC);
+            break;
+        case 'hatu':
+            $('#j_count_hatu').attr('value',hatuC);
+            break;
+        case 'chun':
+            $('#j_count_chun').attr('value',chunC);
+            break;
+        case 'm-1':
+            $('#m_count_1').attr('value',m1C);
+            break;
+        case 'm-2':
+            $('#m_count_2').attr('value',m2C);
+            break;
+        case 'm-3':
+            $('#m_count_3').attr('value',m3C);
+            break;
+        case 'm-4':
+            $('#m_count_4').attr('value',m4C);
+            break;
+        case 'm-5':
+            $('#m_count_5').attr('value',m5C);
+            break;
+        case 'm-6':
+            $('#m_count_6').attr('value',m6C);
+            break;
+        case 'm-7':
+            $('#m_count_7').attr('value',m7C);
+            break;
+        case 'm-8':
+            $('#m_count_8').attr('value',m8C);
+            break;
+        case 'm-9':
+            $('#m_count_9').attr('value',m9C);
+            break;
+        case 'p-1':
+            $('#p_count_1').attr('value',p1C);
+            break;
+        case 'p-2':
+            $('#p_count_2').attr('value',p2C);
+            break;
+        case 'p-3':
+            $('#p_count_3').attr('value',p3C);
+            break;
+        case 'p-4':
+            $('#p_count_4').attr('value',p4C);
+            break;
+        case 'p-5':
+            $('#p_count_5').attr('value',p5C);
+            break;
+        case 'p-6':
+            $('#p_count_6').attr('value',p6C);
+            break;
+        case 'p-7':
+            $('#p_count_7').attr('value',p7C);
+            break;
+        case 'p-8':
+            $('#p_count_8').attr('value',p8C);
+            break;
+        case 'p-9':
+            $('#p_count_9').attr('value',p9C);
+            break;
+        case 's-1':
+            $('#s_count_1').attr('value',s1C);
+            break;
+        case 's-2':
+            $('#s_count_2').attr('value',s2C);
+            break;
+        case 's-3':
+            $('#s_count_3').attr('value',s3C);
+            break;
+        case 's-4':
+            $('#s_count_4').attr('value',s4C);
+            break;
+        case 's-5':
+            $('#s_count_5').attr('value',s5C);
+            break;
+        case 's-6':
+            $('#s_count_6').attr('value',s6C);
+            break;
+        case 's-7':
+            $('#s_count_7').attr('value',s7C);
+            break;
+        case 's-8':
+            $('#s_count_8').attr('value',s8C);
+            break;
+        case 's-9':
+            $('#s_count_9').attr('value',s9C);
+            break;
+        default:
+            break;
+      }
+  }
+
+  //inputリセット
+  function resetSelect(){
+    $("#j_count_ton").attr('value', 0);
+    $('#j_count_nan').attr('value', 0);
+    $('#j_count_sha').attr('value', 0);
+    $('#j_count_pei').attr('value', 0);
+    $('#j_count_haku').attr('value', 0);
+    $('#j_count_hatu').attr('value', 0);
+    $('#j_count_chun').attr('value', 0);
+    $('#m_count_1').attr('value', 0);
+    $('#m_count_2').attr('value', 0);
+    $('#m_count_3').attr('value', 0);
+    $('#m_count_4').attr('value', 0);
+    $('#m_count_5').attr('value', 0);
+    $('#m_count_6').attr('value', 0);
+    $('#m_count_7').attr('value', 0);
+    $('#m_count_8').attr('value', 0);
+    $('#m_count_9').attr('value', 0);
+    $('#p_count_1').attr('value', 0);
+    $('#p_count_2').attr('value', 0);
+    $('#p_count_3').attr('value', 0);
+    $('#p_count_4').attr('value', 0);
+    $('#p_count_5').attr('value', 0);
+    $('#p_count_6').attr('value', 0);
+    $('#p_count_7').attr('value', 0);
+    $('#p_count_8').attr('value', 0);
+    $('#p_count_9').attr('value', 0);
+    $('#s_count_1').attr('value', 0);
+    $('#s_count_2').attr('value', 0);
+    $('#s_count_3').attr('value', 0);
+    $('#s_count_4').attr('value', 0);
+    $('#s_count_5').attr('value', 0);
+    $('#s_count_6').attr('value', 0);
+    $('#s_count_7').attr('value', 0);
+    $('#s_count_8').attr('value', 0);
+    $('#s_count_9').attr('value', 0);
   }
 
 
@@ -417,6 +563,7 @@ $(function(){
 
     addImage(src);
     addInput(id);
+    addInputCount(id);
   });
 
 
@@ -427,6 +574,9 @@ $(function(){
       'opacity':'1',
       'pointer-events':'auto'
     });
+    $('#selectHais').attr('value',0);
+    selectHais = [];
+    resetSelect();
   });
 
 

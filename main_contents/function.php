@@ -3,10 +3,11 @@
 /*選択された牌を種類ごとの配列に入れる関数
 ---------------------------------------------------------------*/
 
-function receive_manzu($hais) {
+function receive_manzu($hais)
+{
   require_once("check.php");
 
-  $manzu_tehai=[];
+  $manzu_tehai = [];
   global $m_count_1;
   global $m_count_2;
   global $m_count_3;
@@ -16,6 +17,10 @@ function receive_manzu($hais) {
   global $m_count_7;
   global $m_count_8;
   global $m_count_9;
+
+  if ($hais == null) {
+    return [];
+  }
 
   foreach ($hais as $hai) {
     switch ($hai) {
@@ -70,10 +75,11 @@ function receive_manzu($hais) {
   return $manzu_tehai;
 }
 
-function receive_pinzu($hais) {
+function receive_pinzu($hais)
+{
   require_once("check.php");
 
-  $pinzu_tehai=[];
+  $pinzu_tehai = [];
   global $p_count_1;
   global $p_count_2;
   global $p_count_3;
@@ -83,6 +89,10 @@ function receive_pinzu($hais) {
   global $p_count_7;
   global $p_count_8;
   global $p_count_9;
+
+  if ($hais == null) {
+    return [];
+  }
 
   foreach ($hais as $hai) {
     switch ($hai) {
@@ -137,10 +147,11 @@ function receive_pinzu($hais) {
   return $pinzu_tehai;
 }
 
-function receive_souzu($hais) {
+function receive_souzu($hais)
+{
   require_once("check.php");
 
-  $souzu_tehai=[];
+  $souzu_tehai = [];
   global $s_count_1;
   global $s_count_2;
   global $s_count_3;
@@ -150,6 +161,10 @@ function receive_souzu($hais) {
   global $s_count_7;
   global $s_count_8;
   global $s_count_9;
+
+  if ($hais == null) {
+    return [];
+  }
 
   foreach ($hais as $hai) {
     switch ($hai) {
@@ -204,10 +219,11 @@ function receive_souzu($hais) {
   return $souzu_tehai;
 }
 
-function receive_jihai($hais) {
+function receive_jihai($hais)
+{
   require_once("check.php");
 
-  $jihai_tehai=[];
+  $jihai_tehai = [];
   global $j_count_ton;
   global $j_count_nan;
   global $j_count_sha;
@@ -215,6 +231,10 @@ function receive_jihai($hais) {
   global $j_count_haku;
   global $j_count_hatu;
   global $j_count_chun;
+
+  if ($hais == null) {
+    return [];
+  }
 
   foreach ($hais as $hai) {
     switch ($hai) {
@@ -262,9 +282,10 @@ function receive_jihai($hais) {
 /*選択された手牌を表示する
 ---------------------------------------------------------------*/
 
-function displayTehai($tehais){
-  foreach($tehais as $tehai){
-    switch($tehai){
+function displayTehai($tehais)
+{
+  foreach ($tehais as $tehai) {
+    switch ($tehai) {
       case "m-1":
         echo '<img src="../img/janpai/man-1.png" alt="M1">';
         break;
@@ -374,14 +395,181 @@ function displayTehai($tehais){
 
 /*確認画面から結果画面へ手牌データを送信*/
 
-function passData($tehais){
-  foreach($tehais as $tehai){
+function passData($tehais)
+{
+  foreach ($tehais as $tehai) {
     echo "<input type='hidden' name='tehais[]' value='$tehai'>";
   }
 }
 
-function passJouken($joukens){
-  foreach($joukens as $jouken){
+function passJouken($joukens)
+{
+  foreach ($joukens as $jouken) {
     echo "<input type='hidden' name='joukens[]' value='$jouken'>";
   }
+}
+
+
+//選択牌をそれぞれに分割
+
+function distributionJihai($hais)
+{
+  require_once("check.php");
+  global $jihai;
+
+  foreach ($hais as $hai) {
+    switch ($hai) {
+      case 'ton':
+        $jihai[] = $hai;
+        break;
+      case 'nan':
+        $jihai[] = $hai;
+        break;
+      case 'sha':
+        $jihai[] = $hai;
+        break;
+      case 'pei':
+        $jihai[] = $hai;
+        break;
+      case 'haku':
+        $jihai[] = $hai;
+        break;
+      case 'hatu':
+        $jihai[] = $hai;
+        break;
+      case 'chun':
+        $jihai[] = $hai;
+        break;
+      default:
+        break;
+    }
+  }
+
+  return $jihai;
+}
+
+function distributionManzu($hais)
+{
+  require_once("check.php");
+  global $manzu;
+
+  foreach ($hais as $hai) {
+    switch ($hai) {
+      case 'm-1':
+        $manzu[] = $hai;
+        break;
+      case 'm-2':
+        $manzu[] = $hai;
+        break;
+      case 'm-3':
+        $manzu[] = $hai;
+        break;
+      case 'm-4':
+        $manzu[] = $hai;
+        break;
+      case 'm-5':
+        $manzu[] = $hai;
+        break;
+      case 'm-6':
+        $manzu[] = $hai;
+        break;
+      case 'm-7':
+        $manzu[] = $hai;
+        break;
+      case 'm-8':
+        $manzu[] = $hai;
+        break;
+      case 'm-9':
+        $manzu[] = $hai;
+        break;
+      default:
+        break;
+    }
+  }
+
+  return $manzu;
+}
+
+function distributionPinzu($hais)
+{
+  require_once("check.php");
+  global $pinzu;
+
+  foreach ($hais as $hai) {
+    switch ($hai) {
+      case 'p-1':
+        $pinzu[] = $hai;
+        break;
+      case 'p-2':
+        $pinzu[] = $hai;
+        break;
+      case 'p-3':
+        $pinzu[] = $hai;
+        break;
+      case 'p-4':
+        $pinzu[] = $hai;
+        break;
+      case 'p-5':
+        $pinzu[] = $hai;
+        break;
+      case 'p-6':
+        $pinzu[] = $hai;
+        break;
+      case 'p-7':
+        $pinzu[] = $hai;
+        break;
+      case 'p-8':
+        $pinzu[] = $hai;
+        break;
+      case 'p-9':
+        $pinzu[] = $hai;
+        break;
+      default:
+        break;
+    }
+  }
+
+  return $pinzu;
+}
+
+function distributionSouzu($hais)
+{
+  require_once("check.php");
+  global $souzu;
+
+  foreach ($hais as $hai) {
+    switch ($hai) {
+      case 's-1':
+        $souzu[] = $hai;
+        break;
+      case 's-2':
+        $souzu[] = $hai;
+        break;
+      case 's-3':
+        $souzu[] = $hai;
+        break;
+      case 's-4':
+        $souzu[] = $hai;
+        break;
+      case 's-5':
+        $souzu[] = $hai;
+        break;
+      case 's-6':
+        $souzu[] = $hai;
+        break;
+      case 's-7':
+        $souzu[] = $hai;
+        break;
+      case 's-8':
+        $souzu[] = $hai;
+        break;
+      case 's-9':
+        $souzu[] = $hai;
+        break;
+      default:
+        break;
+    }
+  }
+
+  return $souzu;
 }

@@ -17,9 +17,13 @@ $pinhu = $_POST["pinhu"];
 
 $joukens = [$bakaze, $jikaze, $dora, $renchan, $reach, $naki, $tumo_ron, $kan, $rinshan, $pinhu];
 
+//選択牌まとめ
+$selectHais = $_POST['selectHais'];
+$selectArray = explode(',', $selectHais[0]);
+
+
 /*手牌変数*/
-$jihai = $_POST['jihai'];
-var_dump($jihai);
+$jihai = distributionJihai($selectArray);
 $j_count_ton = $_POST['j-count-ton'];
 $j_count_nan = $_POST['j-count-nan'];
 $j_count_sha = $_POST['j-count-sha'];
@@ -28,7 +32,7 @@ $j_count_haku = $_POST['j-count-haku'];
 $j_count_hatu = $_POST['j-count-hatu'];
 $j_count_chun = $_POST['j-count-chun'];
 
-$manzu = $_POST['manzu'];
+$manzu = distributionManzu($selectArray);
 $m_count_1 = $_POST['m-count-1'];
 $m_count_2 = $_POST['m-count-2'];
 $m_count_3 = $_POST['m-count-3'];
@@ -39,7 +43,7 @@ $m_count_7 = $_POST['m-count-7'];
 $m_count_8 = $_POST['m-count-8'];
 $m_count_9 = $_POST['m-count-9'];
 
-$pinzu = $_POST['pinzu'];
+$pinzu = distributionPinzu($selectArray);
 $p_count_1 = $_POST['p-count-1'];
 $p_count_2 = $_POST['p-count-2'];
 $p_count_3 = $_POST['p-count-3'];
@@ -50,7 +54,7 @@ $p_count_7 = $_POST['p-count-7'];
 $p_count_8 = $_POST['p-count-8'];
 $p_count_9 = $_POST['p-count-9'];
 
-$souzu = $_POST['souzu'];
+$souzu = distributionSouzu($selectArray);
 $s_count_1 = $_POST['s-count-1'];
 $s_count_2 = $_POST['s-count-2'];
 $s_count_3 = $_POST['s-count-3'];
